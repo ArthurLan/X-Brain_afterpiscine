@@ -9,7 +9,7 @@ session_start();
 <html lang="en">
 	<head>
 		<title>X-BRAIN</title>
-		<link rel="stylesheet" type="text/css" href="index.css">
+	/	<link rel="stylesheet" type="text/css" href="index.css">
 		<meta charset="utf-8">
 		<link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet">
 	</head>
@@ -26,12 +26,12 @@ session_start();
 	include("modules/"."cart.php");
 	if (isset($_SESSION['login']))
 	{
-		echo "<span class=\"pad_nav account_but\"><a href=\"my_account.php\"><b>".$_SESSION['login']."</b></a></span>";
+		echo "<span class=\"pad_nav account_but\"><a href=\"index.php?my_account\"><b>".$_SESSION['login']."</b></a></span>";
 		echo "<span class=\"pad_nav disconnect_but\"><a href=\"index.php?disconnect\"><b>Se déconnecter</b></a></span>";
 
 	}
 	else
-		echo "<span class=\"pad_nav account_but\"><a href=\"index.php?account\"><b>Me connecter</b></a></span>";
+		echo "<span class=\"pad_nav account_but\"><a href=\"index.php?login\"><b>Me connecter</b></a></span>";
 ?>
 </div>
 		</header>
