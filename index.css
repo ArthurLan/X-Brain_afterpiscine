@@ -1,0 +1,285 @@
+* {
+	font-family: 'Arvo', serif;
+}
+
+header {
+	background-color:#0;
+	height: 3vw;
+	min-height: 5%;
+	margin: auto;
+	width: 80vw;
+	z-index: 8888;
+	top: 0;
+	background-color: #ffffff;
+	position: sticky;
+}
+h1 {
+	text-align: center;
+}
+li {
+	margin: 0.5vw;
+}
+.back_pic {
+	background-image: url('private/img/back.png');
+	width: 80vw;
+	height: 80vw;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+#home_page_title {
+	position: absolute;
+	left: 13vw;
+}
+#home_page_pic {
+	width: 13vw;
+	height: 9vw;
+	top: 13vw;
+	position: absolute;
+}
+#nav_list {
+	position: absolute;
+	top: 1.5vw;
+}
+.pad_nav {
+	padding: 1vw;
+}
+a:link, a:visited {
+	text-decoration: none;
+	color: black;
+}
+.button {
+	width: 4.5vw;
+	padding: 0.3vw;
+}
+.center {
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: center;
+}
+.column {
+	float: left;
+	padding: 1vw;
+	margin-top: 0.8vw;
+	margin: 0.4vw;
+	background-color:#0;
+}
+
+/* Left and right column */
+.column.side {
+	width: 13vw;
+	height: 41vw;
+	background:rgba(255,255,255,0.92);
+	z-index:1;
+	position: sticky;
+	top: 65;
+}
+
+/* Middle column */
+.column.middle {
+	width: 57vw;
+	height: fit-content;
+	background:rgba(255,255,255,0.92);
+	z-index:1;
+}
+.column, header, .box {
+	border-radius: 4px;
+}
+.shadow {
+	box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.item {
+	border: 1px solid #c2c2c2;
+	width: 16vw;
+	height: 16vw;
+	margin: 1vw;
+	margin: 1vw;
+	display: inline-table;
+	text-align: center;
+}
+.cat {
+	text-align: center;
+	margin: 1vw;
+}
+.account_but {
+	position: absolute;
+	right: 9vw;
+}
+.disconnect_but {
+	position: absolute;
+	right: 14vw;
+}
+.dropbtn {
+	background-color: rgb(241,241,241,0.2);
+	color: black;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	border-radius: 15px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+	background-color: rgb(241,241,241);
+}
+
+.dropdown {
+	position: absolute;
+	display: inline-block;
+	right: 2vw;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.user_data {
+	border: 1px solid #c2c2c2;
+	width: 16vw;
+	height: 16vw;
+	margin: 1vw;
+	margin: 1vw;
+	display: inline-table;
+	text-align: center;
+}
+
+.tab_data {
+	border: 1px solid #c2c2c2;
+	width: 16vw;
+	height: 16vw;
+	margin: 1vw;
+	margin: 1vw;
+	display: inline-table;
+	text-align: center;
+}
+
+
+
+
+/* Ziyi */
+
+
+.register_container {
+  float: left;
+  margin: 10px;
+  width: 40%;
+}
+
+.log_in_container {
+  float: right;
+  margin: 10px;
+  width: 40%;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #fff;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #f5feff;
+  outline: none;
+  box-shadow: inset 0 0 8px rgba(83, 230, 255, 0.85);
+  transition: border-color .5s ease-out;
+  font-size: 18px;
+}
+
+input[type=text]:required, input[type=password]:required {
+	  border: 1px solid #eee;
+	  border-left: 3px solid;
+	  border-radius: 5px;
+}
+
+input[type=text]:invalid, input[type=password]:invalid {
+	  border-left-color: salmon;
+	  transition: border-color .5s ease-out;
+}
+/* Set a style for the submit/register button */
+.registerbtn {
+	background-color: white;
+	color: black;
+  	font-size: 15px;
+  	width: 150px;
+  	padding: 8px;
+  	border: 2px solid #000;
+  	text-align: center;
+  	outline: none;
+  	text-decoration: none;
+	margin-top: 30px;
+}
+
+.registerbtn:hover {
+	background-color: #000;
+	color: #fff;
+}
+.loginbtn:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+.loginbtn {
+	background-color: black;
+	color: white;
+  	font-size: 15px;
+  	width: 150px;
+  	padding: 8px;
+  	border: 2px solid #000;
+  	text-align: center;
+  	outline: none;
+  	text-decoration: none;
+	margin-top: 30px;
+}
+
+.feedback {
+	width: 100%;
+	font-weight: bold;
+	text-align: center;
+	font-size: 50px;
+	color: black;
+}
+
+
+
+
+/* Cart ? to modify 
+
+
+#add_to_cart {
+	background-color: white;
+	color: black;
+	font-size: 15px;
+	width: 150px;
+	padding: 8px;
+	border: 2px solid #000;
+	text-align: center;
+	outline: none;
+	text-decoration: none;
+}
+
+*/

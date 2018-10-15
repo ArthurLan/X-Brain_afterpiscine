@@ -1,0 +1,9 @@
+<< Serialize formating >>
+
+- title 
+- description
+- image (path)
+- category
+- tag
+- price
+- (stock)
