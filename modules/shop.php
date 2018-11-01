@@ -28,20 +28,25 @@ foreach ($list as $item)
 	@$item_data = unserialize(file_get_contents($item));
 //			print_r($item_data);
 	if (!(isset(array_keys($_GET)[1])) || array_keys($_GET)[1] == $item_data['tags'])
-		// echo "<div class=\"item\"><p>".$item_data['name']."</p><p>".$item_data['price']."</p><form type=\"submit\" action=\"cart_cookie.php\" method=\"post\"><button>add to cart</button></form></div>";
+		echo "<div class=\"item\"><p>".$item_data['name']."</p>";
+		echo "<p>".$item_data['price']."</p>";
+		echo "<form type=\"submit\" action=\"cart_cookie.php\" method=\"post\">";
+	//	echo "<input type=\"hidden\" name=\"item_title\" value=\"".$item_data['name']."\" />";
+	//	echo "<input type=\"hidden\" name=\"item_price\" value=\"".$item_data['price']."\" />";
+		echo "<button id=\"add_to_cart\">add to cart</button></form></div>";
+}
+
 	?>
+	</div>
+</div>
+<!--
 			<div class="item">
-				<p><?php echo $item_data['name'] ?></p>
-				<p><?php echo $item_data['price'] ?></p>
+				<p><?php //echo $item_data['name'] ?></p>
+				<p><?php //echo $item_data['price'] ?></p>
 				<form type="submit" action="cart.php" method="post">
-					<input type="hidden" name="item_title" value="<?php echo $item_data['name'] ?>" />
-					<input type="hidden" name="item_price" value="<?= $item_data['price'] ?>" />
+					<input type="hidden" name="item_title" value="<?php// echo $item_data['name'] ?>" />
+					<input type="hidden" name="item_price" value="<?php// $item_data['price'] ?>" />
 					<button id="add_to_cart">add to cart</button>
 				</form>
 			</div>
-<?php
-}
-
-?>
-	</div>
-</div>
+-->

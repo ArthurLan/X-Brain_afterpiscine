@@ -1,7 +1,11 @@
 <div class="dropdown">
-<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+<button onclick="myFunction()" class="dropbtn">Mon panier</button>
   <div id="myDropdown" class="dropdown-content">
-  	<?php
+<?php
+//	if (isset($_SESSION['cart'][1][0]))
+//		echo "Votre panier est vide";
+//	else
+//	{
 		for ($i = 0; $i < Count($_SESSION['cart']); $i++) {
 			echo "<p>";
 			echo $_SESSION['cart'][$i][0];
@@ -9,6 +13,7 @@
 			echo $_SESSION['cart'][$i][1];
 			echo "</p>";
 		}
+//	}
 		// foreach ($_SESSION['cart'] as $article) {
 		// 	echo "<p>";
 		// 	echo $article['item_title'];

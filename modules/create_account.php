@@ -18,9 +18,9 @@ if (isset($_POST['submit']))
 		$new_user['address'] = "";
 		$new_user['postal'] = "";
 		$new_user['city'] = "";
-		if (!file_exists("./user_base"))
+		if (!file_exists("./private/user_base"))
 		{
-            mkdir("./user_base");
+            mkdir("./private/user_base");
 			$new_user['admin'] = 1;
 		}
 		$list = glob("user_base/*.user");

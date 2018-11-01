@@ -20,6 +20,11 @@ session_start();
 				<span class="pad_nav"><a href="index.php?home"><b>HOME</b></a></span>
 				<span class="pad_nav"><a href="index.php?shop"><b>SHOP<b></a></span>
 				<span class="pad_nav"><a href="index.php?technology"><b>TECHNOLOGY<b></a></span>
+<?PHP
+if (isset($_SESSION['logged_admin']))
+	echo "<span class=\"pad_nav\"><a href=\"index.php?admin\"><b>ADMIN<b></a></span>";
+//	echo "<span class=\"pad_nav\">><b>ADMIN<b></a></span>";
+?>
 			</div>
 <div class="">
 <?PHP
