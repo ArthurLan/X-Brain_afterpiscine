@@ -5,7 +5,8 @@ if (isset($_POST['item_title']) && isset($_POST['item_price']) && isset($_SESSIO
 	$item_title = $_POST['item_title'];
 	$item_price = $_POST['item_price'];
 	$_SESSION['cart'][] = array($item_title, $item_price);
-	header('Location: index.php');
+	header('Location: ../index.php?shop');
+
 	// $product_path = 'private/product_base/' . $item_title . "." . "product";
 	// if(file_exists($product_path))
 	// {

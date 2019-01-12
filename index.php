@@ -9,7 +9,7 @@ session_start();
 <html lang="en">
 	<head>
 		<title>X-BRAIN</title>
-	/	<link rel="stylesheet" type="text/css" href="index.css">
+		<link rel="stylesheet" type="text/css" href="index.css">
 		<meta charset="utf-8">
 		<link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet">
 	</head>

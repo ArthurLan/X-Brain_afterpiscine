@@ -5,6 +5,7 @@
 	</div>
 	<div class="column side shadow">
 		<div class="cat"><a href="index.php?shop"><b>ALL</b></a></div>
+		<div class="cat"><a href="index.php?shop&implant"><b>Implant</b></a></div>
 		<div class="cat"><a href="index.php?shop&souvenir"><b>Souvenirs</b></a></div>
 		<div class="cat"><a href="index.php?shop&physical"><b>Physical</b></a></div>
 		<div class="cat"><a href="index.php?shop&culture"><b>Culture</b></a></div>
@@ -28,12 +29,16 @@ foreach ($list as $item)
 	@$item_data = unserialize(file_get_contents($item));
 //			print_r($item_data);
 	if (!(isset(array_keys($_GET)[1])) || array_keys($_GET)[1] == $item_data['tags'])
+	{
 		echo "<div class=\"item\"><p>".$item_data['name']."</p>";
+		if (isset($item_data['img']))
+		echo "<img class=\"img_shop\" src=\"private/img/".$item_data['img']."\">";
 		echo "<p>".$item_data['price']."</p>";
-		echo "<form type=\"submit\" action=\"cart_cookie.php\" method=\"post\">";
-	//	echo "<input type=\"hidden\" name=\"item_title\" value=\"".$item_data['name']."\" />";
-	//	echo "<input type=\"hidden\" name=\"item_price\" value=\"".$item_data['price']."\" />";
+		echo "<form type=\"submit\" action=\"modules/to_cart.php\" method=\"post\">";
+		echo "<input type=\"hidden\" name=\"item_title\" value=\"".$item_data['name']."\" />";
+		echo "<input type=\"hidden\" name=\"item_price\" value=\"".$item_data['price']."\" />";
 		echo "<button id=\"add_to_cart\">add to cart</button></form></div>";
+	}
 }
 
 	?>
