@@ -93,15 +93,7 @@ a:link, a:visited {
 	display: table;
 	clear: both;
 }
-.item {
-	border: 1px solid #c2c2c2;
-	width: 16vw;
-	height: 16vw;
-	margin: 1vw;
-	margin: 1vw;
-	display: inline-table;
-	text-align: center;
-}
+
 .cat {
 	text-align: center;
 	margin: 1vw;
@@ -176,6 +168,16 @@ a:link, a:visited {
 	text-align: center;
 }
 
+.tab_data_item {
+	border: 1px solid #c2c2c2;
+	border-style : none solid none none;
+	width: 7vw;
+	height: 2vw;
+	/* margin: 1vw; */
+	/* margin: 1vw; */
+	display: inline-table;
+	text-align: center;
+}
 
 
 
@@ -268,22 +270,59 @@ input[type=text]:invalid, input[type=password]:invalid {
 
 
 /* Cart ? to modify 
-
+*/
 
 #add_to_cart {
 	background-color: white;
 	color: black;
 	font-size: 15px;
-	width: 150px;
-	padding: 8px;
+	width: 7em;
+    padding: 0.5em;
 	border: 2px solid #000;
 	text-align: center;
-	outline: none;
-	text-decoration: none;
+	/* outline: none; */
+	/* text-decoration: none; */
 }
 
-*/
+#add_to_cart:hover {
+	background-color: lightcyan;	
+	font-size: 18px;
+}
+
+
+/* SHOP */
+
+.item {
+	border: 1px solid #c2c2c2;
+	width: 16vw;
+	height: 16vw;
+	margin: 1vw;
+	margin: 1vw;
+	display: inline-table;
+	text-align: center;
+}
+
+.description {
+	display: none;
+	position: absolute;
+    width: inherit;
+	background:rgba(255,255,255,0.97);
+    border: 2px solid;
+    height: 11em;
+    margin: 3em auto;
+}
+
+.item:hover .description {
+	display: block;
+}
+
+.item_name {
+	font-size: 1.3em;
+	padding-top: 0.6em;
+}
 
 .img_shop {
-	width: 12vw;
+	max-width: 12vw;
+    max-height: 9vw;
+	border-radius: 5px;
 }

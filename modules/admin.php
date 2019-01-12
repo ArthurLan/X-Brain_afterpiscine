@@ -61,15 +61,19 @@ else if (!(isset(array_keys($_GET)[1])) || array_keys($_GET)[1] == "item")
 				// print_r($item_data);
 		echo "<form method=\"post\">";// action=\"index.php?admin&item\">";
 		echo "<table class=\"user_data\">";
-		echo "<td class=\"tab_data\"><input type=\"admin_modif\" name=\"name\" value=\"".$item_data['name']."\"/><td>";
+		echo "<td class=\"tab_data_item\"><input type=\"admin_modif\" name=\"name\" value=\"".$item_data['name']."\"/><td>";
 		if (isset($item_data['img']))
-			echo "<td class=\"tab_data\"><input type=\"admin_modif\" name=\"img\" value=\"".$item_data['img']."\"/><td>";
+			echo "<td class=\"tab_data_item\"><input type=\"admin_modif\" name=\"img\" value=\"".$item_data['img']."\"/><td>";
 		else
-			echo "<td class=\"tab_data\"><input type=\"admin_modif\" name=\"img\" value=\"-\"/><td>";
-		echo "<td class=\"tab_data\"><input type=\"admin_modif\" name=\"price\" value=\"".$item_data['price']."\"/><td>";
-		echo "<td class=\"tab_data\"><input type=\"admin_modif\" name=\"tags\" value=\"".$item_data['tags']."\"/><td>";
-		echo "<button style=\"margin-top:0px;\" class=\"tab_data loginbtn\" name=\"submit_".$item_data['name']."\" type=\"submit\" value=\"OK\">Modifier</button>";
-		echo "<button style=\"margin-top:0px;\" class=\"tab_data loginbtn\" name=\"delete_".$item_data['name']."\" type=\"submit\" value=\"OK\">Supprimer</button></table>";
+			echo "<td class=\"tab_data_item\"><input type=\"admin_modif\" name=\"img\" value=\"-\"/><td>";
+		if (isset($item_data['desc']))
+			echo "<td class=\"tab_data_item\"><input type=\"admin_modif\" name=\"desc\" value=\"".$item_data['desc']."\"/><td>";
+		else
+			echo "<td class=\"tab_data_item\"><input type=\"admin_modif\" name=\"desc\" value=\"-\"/><td>";
+		echo "<td class=\"tab_data_item\"><input type=\"admin_modif\" name=\"price\" value=\"".$item_data['price']."\"/><td>";
+		echo "<td class=\"tab_data_item\"><input type=\"admin_modif\" name=\"tags\" value=\"".$item_data['tags']."\"/><td>";
+		echo "<button style=\"margin-top:0px; width: 100px;\" class=\"tab_data_item loginbtn\" name=\"submit_".$item_data['name']."\" type=\"submit\" value=\"OK\">Modifier</button>";
+		echo "<button style=\"margin-top:0px; width: 100px;\" class=\"tab_data_item loginbtn\" name=\"delete_".$item_data['name']."\" type=\"submit\" value=\"OK\">Supprimer</button></table>";
 		echo "</form>";
 		// echo "<td class=\"tab_data\">".$item_data['mail']."<td></table>";
 		if (isset($_POST['submit_'.$item_data['name']]))
@@ -79,6 +83,8 @@ else if (!(isset(array_keys($_GET)[1])) || array_keys($_GET)[1] == "item")
 				$new_info['name'] = $_POST['name'];
 			if (isset($_POST['img']))
 				$new_info['img'] = $_POST['img'];
+			if (isset($_POST['desc']))
+				$new_info['desc'] = $_POST['desc'];
 			if (isset($_POST['price']))
 				$new_info['price'] = $_POST['price'];
 			if (isset($_POST['tags']))
@@ -98,11 +104,12 @@ else if (!(isset(array_keys($_GET)[1])) || array_keys($_GET)[1] == "item")
 	}
 		echo "<form method=\"post\">";// action=\"index.php?admin&item\">";
 		echo "<table class=\"user_data\">";
-		echo "<td class=\"tab_data\"><input type=\"admin_modif\" name=\"name\" value=\"New item\"/><td>";
-		echo "<td class=\"tab_data\"><input type=\"admin_modif\" name=\"img\" value=\"Item img\"/><td>";
-		echo "<td class=\"tab_data\"><input type=\"admin_modif\" name=\"price\" value=\"Item price\"/><td>";
-		echo "<td class=\"tab_data\"><input type=\"admin_modif\" name=\"tags\" value=\"Item tag\"/><td>";
-		echo "<button style=\"margin-top:0px;\" class=\"tab_data loginbtn\" name=\"submit_new_item\" type=\"submit\" value=\"OK\">Créer</button>";
+		echo "<td class=\"tab_data_item\"><input type=\"admin_modif\" name=\"name\" value=\"New item\"/><td>";
+		echo "<td class=\"tab_data_item\"><input type=\"admin_modif\" name=\"img\" value=\"Item img\"/><td>";
+		echo "<td class=\"tab_data_item\"><input type=\"admin_modif\" name=\"desc\" value=\"Item desc\"/><td>";
+		echo "<td class=\"tab_data_item\"><input type=\"admin_modif\" name=\"price\" value=\"Item price\"/><td>";
+		echo "<td class=\"tab_data_item\"><input type=\"admin_modif\" name=\"tags\" value=\"Item tag\"/><td>";
+		echo "<button style=\"margin-top:0px; width: 100px;\" class=\"tab_data_item loginbtn\" name=\"submit_new_item\" type=\"submit\" value=\"OK\">Créer</button>";
 		echo "</form>";
 		if (isset($_POST['submit_new_item']))
 		{

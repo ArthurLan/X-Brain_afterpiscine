@@ -30,9 +30,12 @@ foreach ($list as $item)
 //			print_r($item_data);
 	if (!(isset(array_keys($_GET)[1])) || array_keys($_GET)[1] == $item_data['tags'])
 	{
-		echo "<div class=\"item\"><p>".$item_data['name']."</p>";
-		if (isset($item_data['img']))
-		echo "<img class=\"img_shop\" src=\"private/img/".$item_data['img']."\">";
+		echo "<div class=\"item\">";
+		if (isset($item_data['desc']) && $item_data['desc'] != '-')
+			echo "<p class=\"description\">".$item_data['desc']."</p>";
+		echo "<p class=\"item_name\">".$item_data['name']."</p>";
+		if (isset($item_data['img']) && $item_data['img'] != '-')
+			echo "<img class=\"img_shop\" src=\"private/img/".$item_data['img']."\">";
 		echo "<p>".$item_data['price']."</p>";
 		echo "<form type=\"submit\" action=\"modules/to_cart.php\" method=\"post\">";
 		echo "<input type=\"hidden\" name=\"item_title\" value=\"".$item_data['name']."\" />";
