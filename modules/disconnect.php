@@ -1,6 +1,7 @@
 <?PHP
 $_SESSION['login'] = null;
 $_SESSION['logged_on'] = null;
+$_SESSION['logged_admin'] = null;
 header("Refresh: 3; url=index.php?home");
 ?>
 <div class="center row"/>

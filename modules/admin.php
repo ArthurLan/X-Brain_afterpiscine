@@ -1,3 +1,11 @@
+<?PHP 
+if (!isset($_SESSION["logged_admin"]))
+{
+	echo "<p class=\"center\">Désolé, vous essayez d'accéder à une partie du site réservée aux administrateurs.</p>";
+	header("Refresh: 2; url=index.php");
+	@require($_SESSION["logged_admin"]);
+}
+?>
 <div class="center row"/>
 	<div class="column" style="position: absolute">
 		<div class="center back_pic" style=""/> 
